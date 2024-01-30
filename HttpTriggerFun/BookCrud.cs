@@ -20,24 +20,6 @@ namespace HttpTriggerFun
         {
             _bookService = bookService;
         }
-        //[FunctionName("Products")]
-        //public static async Task<IActionResult> Run(
-        //    [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
-        //    ILogger log)
-        //{
-        //    log.LogInformation("C# HTTP trigger function processed a request.");
-
-        //    string name = req.Query["name"];
-
-        //    //var data = new FunctionData();
-        //    //var list = data.ListProduct();
-        //    //string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-        //    //dynamic data = JsonConvert.DeserializeObject(requestBody);
-        //    //name = name ?? data?.name;
-
-        //    return new OkObjectResult("okokokokokokokok");
-
-        //}
 
         [FunctionName("CreateBook")]
         public async Task<IActionResult> CreateBook([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "books")] HttpRequest req
